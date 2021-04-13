@@ -1,13 +1,14 @@
 import React from "react";
-import { ConnectedRouter } from "connected-react-router";
 
 import Layout from "./components/commons/layout";
-import Notifications from "./components/commons/notifications";
 import './App.css';
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
+    <Container>
       <Layout></Layout>
+    </Container>
   );
 }
 

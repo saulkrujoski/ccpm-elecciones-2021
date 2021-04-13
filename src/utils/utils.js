@@ -14,7 +14,7 @@ export const isRequiredBoolean = (value) =>
   value === true || value === false ? undefined : "Requerido!";
 
 export const isValidCUIT = (cuit) => {
-  if (!cuit || cuit.toString().length != 11) {
+  if (!cuit || cuit.toString().length !== 11) {
     return false;
   }
 
@@ -31,11 +31,11 @@ export const isValidCUIT = (cuit) => {
   }
 
   var verif = 11 - (acumulado % 11);
-  if (verif == 11) {
+  if (verif === 11) {
     verif = 0;
   }
 
-  return digito == verif;
+  return digito === verif;
 };
 
 export const validateEmail = (email) => {
@@ -95,3 +95,11 @@ export const isValidRange = (value, minValue, maxValue) =>
   !isNumeric(value) || !isNumeric(minValue) || !isNumeric(maxValue) || value < minValue || value > maxValue
     ? `El rángo permitido es de ${minValue} a ${maxValue}`
     : undefined;
+
+export const transformDropdownOptions = (options) =>
+  options ?
+  options.map((option) => ({
+      key: option.id,
+      text: option.descripcion,
+    }))
+  : undefined;

@@ -8,7 +8,18 @@
     height: 80px;
 }
 
-.header .title{
+.header-logo-content{
+    width: 30%;
+    float: left;
+}
+
+.header-description{
+    width: 70%;
+    float: left;
+    text-align: center;
+}
+
+.header-title{
     height: 100%;
     display: flex;
     justify-content: center;
@@ -41,4 +52,10 @@
 
 .text-centered{
   text-align: center;
+}
+
+.centered-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
